@@ -4,27 +4,40 @@
 Sample application MVVMVGSeries has Three screens 
   a) Login b) Home c) Detail.
 
-  a) Login : LoginViewController
-         : LoginCoordinator
+  a) Login Folders : 
+         : LoginViewController
+         : LoginConfigurator
+         : LoginRouter
          : Login(Storyboard)
          : LoginViewModel
+         : LoginWorker
+         : LoginPresenter
+         : LoginInteractor
          
-b) Home  : HomeViewController
-         : HomeCoordinator
+b) Home Folders
+         : HomeViewController
+         : HomeConfigurator
+         : HomeRouter
          : Home(Storyboard)
          : HomeViewModel
-         : TableViewDelegate
+         : HomeWorker
+         : HomePresenter
+         : HomeInteractor
          : WeatherTableViewCell
          : WeatherForecastBusinessModel
          : WeatherForecast
          
-c) Detail : DetailViewController
-         : LoginCoordinator
+c) Detail 
+         : DetailViewController
+         : DetailConfigurator
+         : DetailRouter
          : Detail(Storyboard)
-         : DetailCoordinator
+         : DetailViewModel
+         : DetailWorker
+         : DetailPresenter
+         : DetailInteractor
 
 Common files are - Coordinator
-                   MainCoordinator
                    Utils
                    StoryBoarded
                    SceneDelegate
