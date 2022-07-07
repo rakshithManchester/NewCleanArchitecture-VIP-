@@ -9,9 +9,13 @@ import Foundation
 
 class DetailIterator {
     var presenter: DetailPresenter!
-    var icon: String = "" {
-        didSet {
+    var icon: String = ""
+}
+
+extension DetailIterator : DetailViewOutput {
+    func sendWeatherImage() {
+        icon.toImage(completion: { [self] icon in
             presenter.icon = icon
-        }
+        })
     }
 }

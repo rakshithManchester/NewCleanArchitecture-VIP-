@@ -6,8 +6,14 @@
 //
 
 import UIKit
-import RxCocoa
-import RxSwift
+
+protocol LoginViewControllerOutput: AnyObject {
+    func passUsernamePassword(username: String?, password: String?)
+}
+
+protocol LoginViewControllerInput: AnyObject {
+    func updateLoginButtonUI(alpha: CGFloat, isEnabled: Bool)
+}
 
 
 class LoginViewController: UIViewController, StoryBoarded {
@@ -15,7 +21,6 @@ class LoginViewController: UIViewController, StoryBoarded {
     var router: LoginRouter!
     var interactor: LoginInteractor!
     var viewModel = LoginViewModel()
-    var bag = DisposeBag()
     
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
@@ -23,22 +28,25 @@ class LoginViewController: UIViewController, StoryBoarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        interactor.enbleReactiveUI()
-        username.rx.text
-            .orEmpty
-            .bind(to: interactor.name)
-            .disposed(by: bag)
         
-        password.rx.text
-            .orEmpty
-            .bind(to: interactor.password)
-            .disposed(by: bag)
-        
-        viewModel.updateButton()
+        username.delegate = self
+        password.delegate = self
     }
     
     @IBAction func loginTap(sender: UIButton) {
         let homeRouter = HomeRouter()
         homeRouter.pushScene(navigationController: self.navigationController ?? UINavigationController())
+    }
+    
+}
+
+extension LoginViewController: UITextFieldDelegate, LoginViewControllerInput {
+    func updateLoginButtonUI(alpha: CGFloat, isEnabled: Bool) {
+        loginButton.alpha = alpha
+        loginButton.isEnabled = isEnabled
+    }
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        interactor.passUsernamePassword(username: username.text, password: password.text)
     }
 }

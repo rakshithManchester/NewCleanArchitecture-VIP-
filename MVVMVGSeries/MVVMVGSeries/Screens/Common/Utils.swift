@@ -7,20 +7,18 @@
 
 import Foundation
 import UIKit
-import RxSwift
-import RxCocoa
 
 
 extension String {
     
-    func toImage() -> BehaviorRelay<UIImage> {
+    func toImage(completion: @escaping (UIImage)->()) {
         let url = URL(string: self )!
-        let image = BehaviorRelay<UIImage>(value: UIImage())
+        var image : UIImage = UIImage()
         URLSession.shared.dataTask(with: url) { _data, response, error in
             if let data = _data {
-                image.accept(UIImage(data: data) ?? UIImage())
+                image = UIImage(data: data) ?? UIImage()
+                completion(image)
             }
         }.resume()
-        return image
     }
 }

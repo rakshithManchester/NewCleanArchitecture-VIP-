@@ -37,7 +37,9 @@ class HomeViewController: UIViewController,StoryBoarded {
         viewModel.businessModel.asObservable().bind(to: tableView.rx.items(cellIdentifier: WeatherTableViewCell.cellID, cellType: WeatherTableViewCell.self)) { (index, data, cell) in
             cell.dateTime.text = data.dateTime
             cell.descript.text = data.description
-            data.icon?.toImage().subscribe { image in DispatchQueue.main.async { cell.imagevw.image = image }}
+            data.icon?.toImage(completion: { image in
+                DispatchQueue.main.async { cell.imagevw.image = image }
+            })
         }.disposed(by: bag)
         
         tableView.rx.modelSelected(WeatherForecastBusinessModel.self).bind {(weather) in

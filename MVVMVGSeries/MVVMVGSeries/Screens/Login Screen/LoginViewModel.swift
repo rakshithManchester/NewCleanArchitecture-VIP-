@@ -7,9 +7,6 @@
 
 import Foundation
 import UIKit
-import RxSwift
-import RxCocoa
-import RxRelay
 
 class LoginViewModel {
     
@@ -17,9 +14,5 @@ class LoginViewModel {
     var newPassword = ""
     
     init() {}
-    
-    func updateButton()  {}
-    
-    func loginClick() {}
     
 }

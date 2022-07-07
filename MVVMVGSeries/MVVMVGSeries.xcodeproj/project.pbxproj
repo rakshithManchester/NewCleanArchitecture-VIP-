@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3E6F60F9079E1BF2357EECF0 /* Pods_MVVMVGSeries.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379BEEEBC255894E8C24BD41 /* Pods_MVVMVGSeries.framework */; };
+		5F41BB602876ADD300855FBC /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F41BB5F2876ADD300855FBC /* DetailViewModel.swift */; };
 		5F6519B2286F0C3E00261C9F /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6519B1286F0C3E00261C9F /* LoginInteractor.swift */; };
 		5F6519B4286F0EE900261C9F /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6519B3286F0EE900261C9F /* LoginRouter.swift */; };
 		5F6519B7286F0F9D00261C9F /* LoginConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6519B6286F0F9D00261C9F /* LoginConfigurator.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		379BEEEBC255894E8C24BD41 /* Pods_MVVMVGSeries.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMVGSeries.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F41BB5F2876ADD300855FBC /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		5F6519B1286F0C3E00261C9F /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		5F6519B3286F0EE900261C9F /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		5F6519B6286F0F9D00261C9F /* LoginConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConfigurator.swift; sourceTree = "<group>"; };
@@ -110,118 +112,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5F6519AD286F0B4400261C9F /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				5F6519B1286F0C3E00261C9F /* LoginInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		5F6519AE286F0B5A00261C9F /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				5F6519BA286F129100261C9F /* LoginPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		5F6519AF286F0B8D00261C9F /* Worker */ = {
-			isa = PBXGroup;
-			children = (
-				5F6519B8286F115D00261C9F /* LoginWorker.swift */,
-			);
-			path = Worker;
-			sourceTree = "<group>";
-		};
-		5F6519B0286F0B9E00261C9F /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				5F6519B3286F0EE900261C9F /* LoginRouter.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		5F6519B5286F0F8300261C9F /* Configurator */ = {
-			isa = PBXGroup;
-			children = (
-				5F6519B6286F0F9D00261C9F /* LoginConfigurator.swift */,
-			);
-			path = Configurator;
-			sourceTree = "<group>";
-		};
-		5FA5DB382872A55E0069E78F /* Configurator */ = {
-			isa = PBXGroup;
-			children = (
-				5FA5DB392872A58B0069E78F /* HomeConfigurator.swift */,
-			);
-			path = Configurator;
-			sourceTree = "<group>";
-		};
-		5FA5DB3B2872A6360069E78F /* HomeRouter */ = {
-			isa = PBXGroup;
-			children = (
-				5FA5DB3C2872A64D0069E78F /* HomeRouter.swift */,
-			);
-			path = HomeRouter;
-			sourceTree = "<group>";
-		};
-		5FA5DB3E2872A9800069E78F /* Iterator */ = {
-			isa = PBXGroup;
-			children = (
-				5FA5DB3F2872A9950069E78F /* HomeIterator.swift */,
-			);
-			path = Iterator;
-			sourceTree = "<group>";
-		};
-		5FA5DB412872AA3D0069E78F /* Worker */ = {
-			isa = PBXGroup;
-			children = (
-				5FA5DB422872AA4E0069E78F /* HomeWorker.swift */,
-			);
-			path = Worker;
-			sourceTree = "<group>";
-		};
-		5FA5DB442872AA700069E78F /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				5FA5DB452872AA850069E78F /* HomePresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		5FA5DB472872DAE50069E78F /* Configurator */ = {
-			isa = PBXGroup;
-			children = (
-				5FA5DB482872DB020069E78F /* DetailConfigurator.swift */,
-			);
-			path = Configurator;
-			sourceTree = "<group>";
-		};
-		5FA5DB4A2872DB810069E78F /* Iterator */ = {
-			isa = PBXGroup;
-			children = (
-				5FA5DB4B2872DBA50069E78F /* DetailIterator.swift */,
-			);
-			path = Iterator;
-			sourceTree = "<group>";
-		};
-		5FA5DB4D2872DBC30069E78F /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				5FA5DB4E2872DBD50069E78F /* DetailPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		5FA5DB502872DC000069E78F /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				5FA5DB512872DC150069E78F /* DetailRouter.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
 		5FABC0C0286C6224000C7B0F /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,16 +126,14 @@
 		5FABC0C1286C622B000C7B0F /* Login Screen */ = {
 			isa = PBXGroup;
 			children = (
-				5F6519B5286F0F8300261C9F /* Configurator */,
-				5F6519B0286F0B9E00261C9F /* Router */,
-				5F6519AF286F0B8D00261C9F /* Worker */,
-				5F6519AE286F0B5A00261C9F /* Presenter */,
-				5F6519AD286F0B4400261C9F /* Interactor */,
-				5FABC0CA286C62CD000C7B0F /* ApiModel */,
-				5FABC0C9286C62C3000C7B0F /* BusinessModel */,
-				5FABC0C7286C62AA000C7B0F /* ViewModel */,
-				5FABC0C6286C6277000C7B0F /* StoryBoard */,
-				5FABC0C5286C6266000C7B0F /* ViewController */,
+				5F6519B6286F0F9D00261C9F /* LoginConfigurator.swift */,
+				5F6519B3286F0EE900261C9F /* LoginRouter.swift */,
+				5F6519B8286F115D00261C9F /* LoginWorker.swift */,
+				5F6519BA286F129100261C9F /* LoginPresenter.swift */,
+				5F6519B1286F0C3E00261C9F /* LoginInteractor.swift */,
+				5FABC0EC286C6E9A000C7B0F /* LoginViewModel.swift */,
+				5FABC0DF286C6501000C7B0F /* Login.storyboard */,
+				5FABC0E1286C6539000C7B0F /* LoginViewController.swift */,
 			);
 			path = "Login Screen";
 			sourceTree = "<group>";
@@ -253,18 +141,18 @@
 		5FABC0C2286C6237000C7B0F /* Home Screen */ = {
 			isa = PBXGroup;
 			children = (
-				5FA5DB442872AA700069E78F /* Presenter */,
-				5FA5DB412872AA3D0069E78F /* Worker */,
-				5FA5DB3E2872A9800069E78F /* Iterator */,
-				5FA5DB3B2872A6360069E78F /* HomeRouter */,
-				5FA5DB382872A55E0069E78F /* Configurator */,
-				5FABC0FF286D79DC000C7B0F /* TableViewDelegate */,
+				5FA5DB452872AA850069E78F /* HomePresenter.swift */,
+				5FA5DB422872AA4E0069E78F /* HomeWorker.swift */,
+				5FA5DB3F2872A9950069E78F /* HomeIterator.swift */,
+				5FA5DB3C2872A64D0069E78F /* HomeRouter.swift */,
+				5FA5DB392872A58B0069E78F /* HomeConfigurator.swift */,
+				5FABC100286D79F6000C7B0F /* TableViewDelegate.swift */,
+				5FABC0F0286CA8B6000C7B0F /* HomeViewController.swift */,
+				5FABC0EE286CA89A000C7B0F /* Home.storyboard */,
+				5FABC0F4286D5CAE000C7B0F /* HomeViewModel.swift */,
+				5FABC0F8286D61B1000C7B0F /* WeatherForecastBusinessModel.swift */,
+				5FABC0F6286D5EDD000C7B0F /* WeatherForecast.swift */,
 				5FABC0FA286D774A000C7B0F /* View */,
-				5FABC0D0286C6330000C7B0F /* ViewController */,
-				5FABC0CF286C6324000C7B0F /* StoryBoard */,
-				5FABC0CE286C631C000C7B0F /* ViewModel */,
-				5FABC0CC286C6304000C7B0F /* BusinessModel */,
-				5FABC0CB286C62FA000C7B0F /* ApiModel */,
 			);
 			path = "Home Screen";
 			sourceTree = "<group>";
@@ -272,132 +160,15 @@
 		5FABC0C4286C624E000C7B0F /* Detail Screen */ = {
 			isa = PBXGroup;
 			children = (
-				5FA5DB502872DC000069E78F /* Router */,
-				5FA5DB4D2872DBC30069E78F /* Presenter */,
-				5FA5DB4A2872DB810069E78F /* Iterator */,
-				5FA5DB472872DAE50069E78F /* Configurator */,
-				5FABC0DC286C6488000C7B0F /* ViewController */,
-				5FABC0DB286C647C000C7B0F /* StoryBoard */,
-				5FABC0DA286C6473000C7B0F /* ViewModel */,
-				5FABC0D8286C640E000C7B0F /* BusinessModel */,
-				5FABC0D7286C6405000C7B0F /* ApiModel */,
+				5FA5DB512872DC150069E78F /* DetailRouter.swift */,
+				5FA5DB4E2872DBD50069E78F /* DetailPresenter.swift */,
+				5FA5DB4B2872DBA50069E78F /* DetailIterator.swift */,
+				5FA5DB482872DB020069E78F /* DetailConfigurator.swift */,
+				5FABC106286DB6A3000C7B0F /* DetailViewController.swift */,
+				5FABC104286DB67B000C7B0F /* Detail.storyboard */,
+				5F41BB5F2876ADD300855FBC /* DetailViewModel.swift */,
 			);
 			path = "Detail Screen";
-			sourceTree = "<group>";
-		};
-		5FABC0C5286C6266000C7B0F /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				5FABC0E1286C6539000C7B0F /* LoginViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		5FABC0C6286C6277000C7B0F /* StoryBoard */ = {
-			isa = PBXGroup;
-			children = (
-				5FABC0DF286C6501000C7B0F /* Login.storyboard */,
-			);
-			path = StoryBoard;
-			sourceTree = "<group>";
-		};
-		5FABC0C7286C62AA000C7B0F /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				5FABC0EC286C6E9A000C7B0F /* LoginViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		5FABC0C9286C62C3000C7B0F /* BusinessModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BusinessModel;
-			sourceTree = "<group>";
-		};
-		5FABC0CA286C62CD000C7B0F /* ApiModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ApiModel;
-			sourceTree = "<group>";
-		};
-		5FABC0CB286C62FA000C7B0F /* ApiModel */ = {
-			isa = PBXGroup;
-			children = (
-				5FABC0F6286D5EDD000C7B0F /* WeatherForecast.swift */,
-			);
-			path = ApiModel;
-			sourceTree = "<group>";
-		};
-		5FABC0CC286C6304000C7B0F /* BusinessModel */ = {
-			isa = PBXGroup;
-			children = (
-				5FABC0F8286D61B1000C7B0F /* WeatherForecastBusinessModel.swift */,
-			);
-			path = BusinessModel;
-			sourceTree = "<group>";
-		};
-		5FABC0CE286C631C000C7B0F /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				5FABC0F4286D5CAE000C7B0F /* HomeViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		5FABC0CF286C6324000C7B0F /* StoryBoard */ = {
-			isa = PBXGroup;
-			children = (
-				5FABC0EE286CA89A000C7B0F /* Home.storyboard */,
-			);
-			path = StoryBoard;
-			sourceTree = "<group>";
-		};
-		5FABC0D0286C6330000C7B0F /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				5FABC0F0286CA8B6000C7B0F /* HomeViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		5FABC0D7286C6405000C7B0F /* ApiModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ApiModel;
-			sourceTree = "<group>";
-		};
-		5FABC0D8286C640E000C7B0F /* BusinessModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BusinessModel;
-			sourceTree = "<group>";
-		};
-		5FABC0DA286C6473000C7B0F /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		5FABC0DB286C647C000C7B0F /* StoryBoard */ = {
-			isa = PBXGroup;
-			children = (
-				5FABC104286DB67B000C7B0F /* Detail.storyboard */,
-			);
-			path = StoryBoard;
-			sourceTree = "<group>";
-		};
-		5FABC0DC286C6488000C7B0F /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				5FABC106286DB6A3000C7B0F /* DetailViewController.swift */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		5FABC0DD286C64B4000C7B0F /* Common */ = {
@@ -433,14 +204,6 @@
 				5FABC0FC286D7772000C7B0F /* WeatherTableViewCell.xib */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		5FABC0FF286D79DC000C7B0F /* TableViewDelegate */ = {
-			isa = PBXGroup;
-			children = (
-				5FABC100286D79F6000C7B0F /* TableViewDelegate.swift */,
-			);
-			path = TableViewDelegate;
 			sourceTree = "<group>";
 		};
 		5FB0465E286B299700C54F61 = {
@@ -625,6 +388,7 @@
 				5FA5DB402872A9950069E78F /* HomeIterator.swift in Sources */,
 				5FA5DB3A2872A58B0069E78F /* HomeConfigurator.swift in Sources */,
 				5FABC0E2286C6539000C7B0F /* LoginViewController.swift in Sources */,
+				5F41BB602876ADD300855FBC /* DetailViewModel.swift in Sources */,
 				5FABC0E7286C6A6C000C7B0F /* Coordinator.swift in Sources */,
 				5FB0466B286B299700C54F61 /* AppDelegate.swift in Sources */,
 				5F6519B2286F0C3E00261C9F /* LoginInteractor.swift in Sources */,
