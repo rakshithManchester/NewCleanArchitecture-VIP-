@@ -8,16 +8,21 @@
 import Foundation
 
 class NetworkManager {
-    static func networkRequest<T: Decodable>(completionHanlder: @escaping (_ model:T)->()) {
-        URLSession.shared.dataTask(with: URL(string: "https://api.openweathermap.org/data/2.5/forecast?lat=13.060212076454148&lon=77.58554121949155&appid=1ef84661b0b599f01d31027b5da1cd93")!) { _data, response, error in
-            if let data = _data{
-                do {
-                   let json = try JSONDecoder().decode(T.self, from: data)
-                    completionHanlder(json as! T)
-                } catch(let excep) {
-                    print(excep)
+    static var environment : Environments = .prod
+    static func networkData<T:Decodable>(router: Router<WeatherEndPoint>, completion: @escaping (Result<T,Error>) -> ()) {
+        let requestURL = router.request(endpoint: .foreCast)
+        URLSession.shared.dataTask(with: requestURL) { _data, _response, _error in
+            guard let data = _data else {
+                if let error = _error as NSError?, error.domain == NSURLErrorDomain {
+                    completion(.failure(error))
                 }
-                
+                return
+            }
+            do {
+                let json = try JSONDecoder().decode(T.self, from: data)
+                completion(.success(json))
+            } catch let _error {
+                completion(.failure(_error))
             }
         }.resume()
     }

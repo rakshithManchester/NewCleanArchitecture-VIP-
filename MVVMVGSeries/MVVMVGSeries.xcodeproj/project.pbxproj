@@ -45,6 +45,15 @@
 		5FB04674286B299B00C54F61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FB04673286B299B00C54F61 /* Assets.xcassets */; };
 		5FB04677286B299B00C54F61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FB04675286B299B00C54F61 /* LaunchScreen.storyboard */; };
 		5FB04685286B66DA00C54F61 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB04684286B66DA00C54F61 /* NetworkManager.swift */; };
+		5FF612742877F22C00AA8803 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF612732877F22C00AA8803 /* EndPointType.swift */; };
+		5FF612762877F88600AA8803 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF612752877F88600AA8803 /* HTTPMethod.swift */; };
+		5FF612782877F8A200AA8803 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF612772877F8A200AA8803 /* HTTPTask.swift */; };
+		5FF6127A2877F8C900AA8803 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF612792877F8C900AA8803 /* ParameterEncoding.swift */; };
+		5FF6127D2877F8FB00AA8803 /* URLEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6127C2877F8FB00AA8803 /* URLEncoding.swift */; };
+		5FF6127F2877F92200AA8803 /* JsonEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6127E2877F92200AA8803 /* JsonEncoding.swift */; };
+		5FF612822877F95800AA8803 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF612812877F95800AA8803 /* Router.swift */; };
+		5FF612842877F99D00AA8803 /* Environments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF612832877F99D00AA8803 /* Environments.swift */; };
+		5FF612862877FB4100AA8803 /* WeatherEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF612852877FB4100AA8803 /* WeatherEndPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +97,15 @@
 		5FB04676286B299B00C54F61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FB04678286B299B00C54F61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FB04684286B66DA00C54F61 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		5FF612732877F22C00AA8803 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		5FF612752877F88600AA8803 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		5FF612772877F8A200AA8803 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		5FF612792877F8C900AA8803 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		5FF6127C2877F8FB00AA8803 /* URLEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEncoding.swift; sourceTree = "<group>"; };
+		5FF6127E2877F92200AA8803 /* JsonEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonEncoding.swift; sourceTree = "<group>"; };
+		5FF612812877F95800AA8803 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		5FF612832877F99D00AA8803 /* Environments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environments.swift; sourceTree = "<group>"; };
+		5FF612852877FB4100AA8803 /* WeatherEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherEndPoint.swift; sourceTree = "<group>"; };
 		BDC5B3DCF88D0E526A99F579 /* Pods-MVVMVGSeries.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMVGSeries.debug.xcconfig"; path = "Target Support Files/Pods-MVVMVGSeries/Pods-MVVMVGSeries.debug.xcconfig"; sourceTree = "<group>"; };
 		DB6F88FA801D5CC28ED5FE9D /* Pods-MVVMVGSeries.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMVGSeries.release.xcconfig"; path = "Target Support Files/Pods-MVVMVGSeries/Pods-MVVMVGSeries.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -242,9 +260,42 @@
 		5FB04683286B66BD00C54F61 /* Network Manager */ = {
 			isa = PBXGroup;
 			children = (
+				5FF612872877FB5100AA8803 /* WeatherEndpoint */,
+				5FF612802877F94100AA8803 /* Services */,
+				5FF6127B2877F8E000AA8803 /* ParameterEncoding */,
 				5FB04684286B66DA00C54F61 /* NetworkManager.swift */,
 			);
 			path = "Network Manager";
+			sourceTree = "<group>";
+		};
+		5FF6127B2877F8E000AA8803 /* ParameterEncoding */ = {
+			isa = PBXGroup;
+			children = (
+				5FF612792877F8C900AA8803 /* ParameterEncoding.swift */,
+				5FF6127C2877F8FB00AA8803 /* URLEncoding.swift */,
+				5FF6127E2877F92200AA8803 /* JsonEncoding.swift */,
+			);
+			path = ParameterEncoding;
+			sourceTree = "<group>";
+		};
+		5FF612802877F94100AA8803 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5FF612732877F22C00AA8803 /* EndPointType.swift */,
+				5FF612752877F88600AA8803 /* HTTPMethod.swift */,
+				5FF612772877F8A200AA8803 /* HTTPTask.swift */,
+				5FF612812877F95800AA8803 /* Router.swift */,
+				5FF612832877F99D00AA8803 /* Environments.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5FF612872877FB5100AA8803 /* WeatherEndpoint */ = {
+			isa = PBXGroup;
+			children = (
+				5FF612852877FB4100AA8803 /* WeatherEndPoint.swift */,
+			);
+			path = WeatherEndpoint;
 			sourceTree = "<group>";
 		};
 		E801D12995C2C7B930C84B4C /* Pods */ = {
@@ -375,6 +426,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FF612862877FB4100AA8803 /* WeatherEndPoint.swift in Sources */,
 				5F6519BB286F129100261C9F /* LoginPresenter.swift in Sources */,
 				5F6519B9286F115D00261C9F /* LoginWorker.swift in Sources */,
 				5FABC101286D79F6000C7B0F /* TableViewDelegate.swift in Sources */,
@@ -383,25 +435,33 @@
 				5F6519B7286F0F9D00261C9F /* LoginConfigurator.swift in Sources */,
 				5FABC0E4286C6655000C7B0F /* StoryBoarded.swift in Sources */,
 				5FA5DB522872DC150069E78F /* DetailRouter.swift in Sources */,
+				5FF612822877F95800AA8803 /* Router.swift in Sources */,
 				5FA5DB492872DB020069E78F /* DetailConfigurator.swift in Sources */,
 				5F6519B4286F0EE900261C9F /* LoginRouter.swift in Sources */,
 				5FA5DB402872A9950069E78F /* HomeIterator.swift in Sources */,
 				5FA5DB3A2872A58B0069E78F /* HomeConfigurator.swift in Sources */,
+				5FF612762877F88600AA8803 /* HTTPMethod.swift in Sources */,
 				5FABC0E2286C6539000C7B0F /* LoginViewController.swift in Sources */,
+				5FF6127F2877F92200AA8803 /* JsonEncoding.swift in Sources */,
 				5F41BB602876ADD300855FBC /* DetailViewModel.swift in Sources */,
 				5FABC0E7286C6A6C000C7B0F /* Coordinator.swift in Sources */,
 				5FB0466B286B299700C54F61 /* AppDelegate.swift in Sources */,
 				5F6519B2286F0C3E00261C9F /* LoginInteractor.swift in Sources */,
+				5FF612782877F8A200AA8803 /* HTTPTask.swift in Sources */,
 				5FABC0F1286CA8B6000C7B0F /* HomeViewController.swift in Sources */,
+				5FF612742877F22C00AA8803 /* EndPointType.swift in Sources */,
 				5FB04685286B66DA00C54F61 /* NetworkManager.swift in Sources */,
 				5FABC107286DB6A3000C7B0F /* DetailViewController.swift in Sources */,
+				5FF612842877F99D00AA8803 /* Environments.swift in Sources */,
 				5FABC103286D7FED000C7B0F /* Utils.swift in Sources */,
+				5FF6127A2877F8C900AA8803 /* ParameterEncoding.swift in Sources */,
 				5FA5DB4C2872DBA50069E78F /* DetailIterator.swift in Sources */,
 				5FABC0F7286D5EDD000C7B0F /* WeatherForecast.swift in Sources */,
 				5FA5DB4F2872DBD50069E78F /* DetailPresenter.swift in Sources */,
 				5FABC0F5286D5CAE000C7B0F /* HomeViewModel.swift in Sources */,
 				5FABC0F9286D61B1000C7B0F /* WeatherForecastBusinessModel.swift in Sources */,
 				5FA5DB432872AA4E0069E78F /* HomeWorker.swift in Sources */,
+				5FF6127D2877F8FB00AA8803 /* URLEncoding.swift in Sources */,
 				5FB0466D286B299700C54F61 /* SceneDelegate.swift in Sources */,
 				5FABC0ED286C6E9A000C7B0F /* LoginViewModel.swift in Sources */,
 				5FA5DB3D2872A64D0069E78F /* HomeRouter.swift in Sources */,
